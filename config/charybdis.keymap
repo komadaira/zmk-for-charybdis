@@ -7,44 +7,26 @@
 / {
     combos {
         compatible = "zmk,combos";
-        cmd_cntrl_alt {
-            bindings = <&kp LC(LA(LEFT_COMMAND))>;
-            key-positions = <36 37 38>;
-        };
-        cmd_cntrl {
-            bindings = <&kp LC(LEFT_COMMAND)>;
-            key-positions = <36 37>;
-        };
-        left_click {
-            bindings = <&mkp LCLK>;
-            key-positions = <43 44>;
-        };
-        right_click {
-            bindings = <&mkp RCLK>;
-            key-positions = <44 45>;
-        };
-        center_click {
-            bindings = <&mkp MCLK>;
-            key-positions = <43 44 45>;
-        };
-        setting_layer {
-            bindings = <&to 2>;
-            key-positions = <0 23>;
-        };
+        cmd_cntrl_alt { bindings = <&kp LC(LA(LEFT_COMMAND))>; key-positions = <36 37 38>; };
+        cmd_cntrl { bindings = <&kp LC(LEFT_COMMAND))>; key-positions = <36 37>; };
+        left_click { bindings = <&mkp LCLK>; key-positions = <43 44>; };
+        right_click { bindings = <&mkp RCLK>; key-positions = <44 45>; };
+        center_click { bindings = <&mkp MCLK>; key-positions = <43 44 45>; };
+        setting_layer { bindings = <&to 2>; key-positions = <0 23>; };
     };
 
     behaviors {
-        // マウス移動用の動作
+        // マウス移動用の動作 (bindings を追加)
         bc: behavior_coarse {
             compatible = "zmk,behavior-pointing-device-movement";
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
+            bindings = <&kp KP_UP &kp KP_DOWN &kp KP_LEFT &kp KP_RIGHT>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
-
         layer_0 {
             bindings = <
                 &kp ESC           &kp N1  &kp N2  &kp N3     &kp N4     &kp N5            &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &kp EQUAL        \
@@ -56,7 +38,6 @@
             >;
             sensor-bindings = <&bc>;
         };
-
         layer_1 {
             bindings = <
                 &trans            &kp F1            &kp F2        &kp F3  &kp F4  &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &kp F11     \
@@ -66,8 +47,9 @@
                                                       &trans  &trans  &trans    &trans  &trans      \
                                                       &trans  &trans    &trans
             >;
+            // ZMK標準のスクロール動作 &tsl を使用
+            sensor-bindings = <&tsl>;
         };
-
         layer_2 {
             bindings = <
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans  &trans    &trans  &bootloader  &trans  &trans  &trans  &trans      \
