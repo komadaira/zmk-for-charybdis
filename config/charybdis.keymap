@@ -36,12 +36,10 @@
     behaviors {
         // マウス移動用の動作
         bc: behavior_coarse {
-            compatible = "zmk,behavior-sensor-rotate-behavior";
+            compatible = "zmk,behavior-pointing-device-movement";
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
-            bindings = <&kp KP_UP &kp KP_DOWN &kp KP_LEFT &kp KP_RIGHT>;
         };
-
         // スクロール用の動作
         bs: behavior_scroll {
             compatible = "zmk,behavior-sensor-rotate-behavior";
