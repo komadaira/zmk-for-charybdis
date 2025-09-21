@@ -51,7 +51,7 @@
 
     pmw3610: pmw3610@0 {
         compatible = "zmk,pmw3610";
-        label = "PMW3610"
+        label = "PMW3610";
         status = "disabled";
         reg = <0>;
         spi-max-frequency = <2000000>;
