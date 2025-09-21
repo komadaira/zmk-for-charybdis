@@ -1,3 +1,4 @@
+#include <dt-bindings/zmk/sensors.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -59,6 +60,22 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+        // マウス移動用の新しい動作 (tmv_coarseの代わり)
+        bc: behavior_coarse {
+            compatible = "zmk,behavior-sensor-rotate-var-speed";
+            label = "BEHAVIOR_COARSE";
+            #sensor-binding-cells = <0>;
+            speed-config = <15 30 50>;
+            slow-time = <15>;
+        };
+        
+        // スクロール用の新しい動作 (tslの代わり)
+        bs: behavior_scroll {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "BEHAVIOR_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_SCROLL_UP &kp C_SCROLL_DOWN &kp C_SCROLL_LEFT &kp C_SCROLL_RIGHT>;
+        };
     };
 
     keymap {
@@ -74,7 +91,7 @@
                                              &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
 
-            sensor-bindings = <&tmv_coarse>;
+            sensor-bindings = <&bc>;
         };
 
         layer_1 {
@@ -87,7 +104,7 @@
                                                           &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&tsl>;
+            sensor-bindings = <&bs>;
         };
 
         layer_2 {
@@ -123,7 +140,7 @@
             >;
                 
                 
-                sensor-bindings = <&tsl>;
+                sensor-bindings = <&bs>;
         };
 
         layer_5 {
