@@ -50,8 +50,8 @@
     status = "disabled";
 
     pmw3610: pmw3610@0 {
-        compatible = "pixart,pmw3610";
-        label = "PMW3610";
+        compatible = "zmk,pmw3610";
+        label = "PMW3610"
         status = "disabled";
         reg = <0>;
         spi-max-frequency = <2000000>;
