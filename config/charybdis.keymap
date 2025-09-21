@@ -60,12 +60,12 @@
             mods = <(MOD_LSFT)>;
         };
         // マウス移動用の新しい動作 (tmv_coarseの代わり)
+        // マウス移動用の動作
         bc: behavior_coarse {
-            compatible = "zmk,behavior-sensor-rotate-var-speed";
+            compatible = "zmk,behavior-sensor-rotate-behavior";
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
-            speed-config = <15 30 50>;
-            slow-time = <15>;
+            bindings = <&kp KP_UP &kp KP_DOWN &kp KP_LEFT &kp KP_RIGHT>;
         };
         
         // スクロール用の新しい動作 (tslの代わり)
