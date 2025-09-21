@@ -46,8 +46,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&csmr>;
         };
-    }
-
+    };
 
     keymap {
         compatible = "zmk,keymap";
