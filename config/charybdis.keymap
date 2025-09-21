@@ -42,7 +42,7 @@
 
         layer_2 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans  &soft_off    &sys_reset  &bootloader  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans  &trans       &sys_reset  &bootloader  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans      &trans  &trans       &trans      &trans       &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans      &trans  &trans       &trans      &trans       &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans      &trans  &trans       &trans      &trans       &trans  &trans  &trans  &trans
