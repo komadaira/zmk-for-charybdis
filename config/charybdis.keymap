@@ -10,36 +10,6 @@
         quick-tap-ms = <150>;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        cmd+cntrl+alt {
-            bindings = <&kp LC(LA(LEFT_COMMAND))>;
-            key-positions = <36 37 38>;
-        };
-
-        cmd+cntrl {
-            bindings = <&kp LC(LEFT_COMMAND)>;
-            key-positions = <36 37>;
-        };
-
-        left-click {
-            bindings = <&mkp LCLK>;
-            key-positions = <43 44>;
-        };
-
-        right-click {
-            bindings = <&mkp RCLK>;
-            key-positions = <44 45>;
-        };
-
-        center-click {
-            bindings = <&mkp MCLK>;
-            key-positions = <43 44 45>;
-        };
-
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
