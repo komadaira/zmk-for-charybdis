@@ -38,26 +38,6 @@
             key-positions = <43 44 45>;
         };
 
-        layer0 {
-            bindings = <&to 0>;
-            key-positions = <0 11>;
-        };
-
-        setting_layer {
-            bindings = <&to 2>;
-            key-positions = <0 23>;
-        };
-    };
-
-    behaviors {
-        jp_minus_equal: jp_minus_equal {
-            compatible = "zmk,behavior-mod-morph";
-            label = "JP_MINUS_EQUAL";
-            bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
     };
 
     keymap {
