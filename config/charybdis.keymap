@@ -70,7 +70,7 @@
         
         // スクロール用の新しい動作 (tslの代わり)
         bs: behavior_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-rotate-behavior";
             label = "BEHAVIOR_SCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&csmr C_SCROLL_UP &csmr C_SCROLL_DOWN &csmr C_SCROLL_LEFT &csmr C_SCROLL_RIGHT>;
