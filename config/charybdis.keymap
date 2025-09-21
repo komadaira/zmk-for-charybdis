@@ -33,29 +33,22 @@
         };
     };
 
-    /*
     behaviors {
-        // スクロール用の動作
-        
-        bs: behavior_scroll {
-
-            compatible = "zmk,behavior-sensor-rotate-behavior";
-
-            label = "BEHAVIOR_SCROLL";
-
-            #sensor-binding-cells = <0>;
-
-            bindings = <&csmr C_SCROLL_UP &csmr C_SCROLL_DOWN &csmr C_SCROLL_LEFT &csmr C_SCROLL_RIGHT>;
-
-        };
         // マウス移動用の動作
         bc: behavior_coarse {
             compatible = "zmk,behavior-pointing-device-movement";
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
         };
+    
+        // スクロール用の動作
+        bs: behavior_scroll {
+            compatible = "zmk,behavior-sensor-rotate-behavior";
+            label = "BEHAVIOR_SCROLL";
+            #sensor-binding-cells = <0>;
+            bindings = <&csmr C_SCROLL_UP &csmr C_SCROLL_DOWN &csmr C_SCROLL_LEFT &csmr C_SCROLL_RIGHT>;
+        };
     };
-    */
 
     keymap {
         compatible = "zmk,keymap";
@@ -69,7 +62,7 @@
                                   &kp SPACE  &mkp LCLK  &mkp RCLK         &kp BACKSPACE   &kp ENTER        \
                                   &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
-           // sensor-bindings = <&bc>;
+           sensor-bindings = <&bc>;
         };
 
         layer_1 {
@@ -81,7 +74,7 @@
                                                       &trans  &trans  &trans    &trans  &trans      \
                                                       &trans  &trans    &trans
             >;
-            // sensor-bindings = <&bs>;
+            sensor-bindings = <&bs>;
         };
 
         layer_2 {
