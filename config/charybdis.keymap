@@ -84,6 +84,7 @@
                                           &trans      &trans  &trans    &trans  &trans      \
                                           &trans      &trans    &trans
             >;
+            sensor-bindings = <&pmw3610_move>;
         };
 
         layer_3 {
@@ -95,6 +96,7 @@
                                                       &kp SPACE  &none  &none    &kp BACKSPACE  &kp ENTER     \
                                                       &none      &none    &none
             >;
+            sensor-bindings = <&pmw3610_move>;
         };
     };
 };
