@@ -1,3 +1,4 @@
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -33,18 +34,33 @@
         };
     };
 
+    /*
     behaviors {
-        // マウス移動用の動作 (bindings を追加)
+        // スクロール用の動作
+        
+        bs: behavior_scroll {
+
+            compatible = "zmk,behavior-sensor-rotate-behavior";
+
+            label = "BEHAVIOR_SCROLL";
+
+            #sensor-binding-cells = <0>;
+
+            bindings = <&csmr C_SCROLL_UP &csmr C_SCROLL_DOWN &csmr C_SCROLL_LEFT &csmr C_SCROLL_RIGHT>;
+
+        };
+        // マウス移動用の動作
         bc: behavior_coarse {
             compatible = "zmk,behavior-pointing-device-movement";
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
-            bindings = <&kp KP_UP &kp KP_DOWN &kp KP_LEFT &kp KP_RIGHT>;
         };
     };
+    */
 
     keymap {
         compatible = "zmk,keymap";
+
         layer_0 {
             bindings = <
                 &kp ESC           &kp N1  &kp N2  &kp N3     &kp N4     &kp N5            &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &kp EQUAL        \
@@ -54,8 +70,9 @@
                                   &kp SPACE  &mkp LCLK  &mkp RCLK         &kp BACKSPACE   &kp ENTER        \
                                   &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
-            sensor-bindings = <&bc>;
+           // sensor-bindings = <&bc>;
         };
+
         layer_1 {
             bindings = <
                 &trans            &kp F1            &kp F2        &kp F3  &kp F4  &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &kp F11     \
@@ -65,9 +82,9 @@
                                                       &trans  &trans  &trans    &trans  &trans      \
                                                       &trans  &trans    &trans
             >;
-            // ZMK標準のスクロール動作 &tsl を使用
-            sensor-bindings = <&tsl>;
+            // sensor-bindings = <&bs>;
         };
+
         layer_2 {
             bindings = <
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans  &trans    &trans  &bootloader  &trans  &trans  &trans  &trans      \
