@@ -40,7 +40,7 @@
             label = "BEHAVIOR_COARSE";
             #sensor-binding-cells = <0>;
         };
-    
+
         // スクロール用の動作
         bs: behavior_scroll {
             compatible = "zmk,behavior-sensor-rotate-behavior";
@@ -62,7 +62,7 @@
                                   &kp SPACE  &mkp LCLK  &mkp RCLK         &kp BACKSPACE   &kp ENTER        \
                                   &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
-           sensor-bindings = <&bc>;
+            sensor-bindings = <&bc>;
         };
 
         layer_1 {
