@@ -74,7 +74,7 @@
                                              &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
 
-            // trackball-bindings = <&tmv_coarse>;
+            sensor-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -87,7 +87,7 @@
                                                           &trans  &trans    &trans
             >;
 
-            // trackball-bindings = <&tsl>;
+            sensor-bindings = <&tsl>;
         };
 
         layer_2 {
@@ -123,7 +123,7 @@
             >;
                 
                 
-                trackball-bindings = <&tsl>;
+                sensor-bindings = <&tsl>;
         };
 
         layer_5 {
