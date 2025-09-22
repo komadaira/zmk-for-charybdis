@@ -45,6 +45,7 @@
 
 	// スクロール用トラックボール profile
 	scroll_mode: scroll_mode {
+	    #trackball-binding-cells = <1>;
 	    x+ = <&mwh 0x04>; // SCROLL_RIGHT
 	    x- = <&mwh 0x03>; // SCROLL_LEFT
 	    y+ = <&mwh 0x01>; // SCROLL_UP
