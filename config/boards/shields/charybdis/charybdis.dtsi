@@ -43,10 +43,10 @@
 
 	// スクロール用トラックボール profile
 	scroll_mode {
-	    x-positive = <&mwh SCROLL_RIGHT>;
-	    x-negative = <&mwh SCROLL_LEFT>;
-	    y-positive = <&mwh SCROLL_UP>;
-	    y-negative = <&mwh SCROLL_DOWN>;
+	    x+ = <&mwh SCROLL_RIGHT>;
+	    x- = <&mwh SCROLL_LEFT>;
+	    y+ = <&mwh SCROLL_UP>;
+	    y- = <&mwh SCROLL_DOWN>;
 	    acceleration-exponent = <1>;
 	    speed-dpi = <100>;
 	};
