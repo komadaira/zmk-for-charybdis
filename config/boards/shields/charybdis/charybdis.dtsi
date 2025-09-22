@@ -43,6 +43,12 @@
 		trackballs = <&trackball>;
 	};
 
+	behaviors {
+        mwh: mwh {
+            compatible = "zmk,behavior-mouse-wheel";
+        };
+    };
+
 	// スクロール用トラックボール profile
 	scroll_mode: scroll_mode {
 	    #trackball-binding-cells = <0>;
