@@ -60,11 +60,13 @@
     };
 };
 
-input-processors {
-    auto_mouse_layer {
-        compatible = "zmk,input-processor-auto-mouse-layer";
-        pointer-layer = <0>;
-        scroll-layer  = <1>;
-        trigger = "trackball";
+/ {
+    input-processors {
+        auto_mouse_layer {
+            compatible = "zmk,input-processor-auto-mouse-layer";
+            pointer-layer = <0>;
+            scroll-layer  = <1>;
+            trigger = "trackball";
+        };
     };
 };
