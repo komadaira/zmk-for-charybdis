@@ -26,26 +26,26 @@
 
         left-click {
             bindings = <&mkp LCLK>;
-            key-positions = <43 44>;
+            key-positions = <32 31>;
         };
 
         right-click {
             bindings = <&mkp RCLK>;
-            key-positions = <44 45>;
+            key-positions = <34 33>;
         };
 
         center-click {
             bindings = <&mkp MCLK>;
-            key-positions = <43 44 45>;
+            key-positions = <31 32 33>;
         };
 
         layer0 {
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <0 11>;
         };
 
         setting_layer {
-            bindings = <&to 2>;
+            bindings = <&to 0>;
             key-positions = <0 23>;
         };
     };
@@ -59,6 +59,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        jp_coron_aster: jp_coron_aster {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JP_CORON_ASTER";
+            bindings = <&kp COLON>, <&kp ASTRK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jp_at_grave: jp_at_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JP_AT_GRAVE";
+            bindings = <&kp AT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jp_yen_pipe: jp_yen_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JP_YEN_PIPE";
+            bindings = <&kp INT_YEN>, <&kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jp_caret_tilda: jp_caret_tilda {
+            compatible = "zmk,behavior-mod-morph";
+            label = "JP_CARET_TILDA";
+            bindings = <&kp CARET>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -66,12 +102,12 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp N1  &kp N2  &kp N3     &kp N4     &kp N5            &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &jp_minus_equal
-&kp TAB           &kp Q   &kp W   &kp E      &kp R      &kp T             &kp Y           &kp U      &kp I      &kp O       &kp P     &kp AT_SIGN
-&kp LEFT_SHIFT    &kp A   &kp S   &kp D      &kp F      &kp G             &kp H           &kp J      &kp K      &kp L       &kp SEMI  &kp COLON
-&kp LEFT_COMMAND  &kp Z   &kp X   &kp C      &kp V      &kp B             &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp MINUS
-                                  &kp SPACE  &mkp LCLK  &mkp RCLK         &kp BACKSPACE   &kp ENTER
-                                             &mo 1      &kp LANGUAGE_2    &kp LANGUAGE_1
+&kp ESC           &kp N1  &kp N2  &kp N3     &kp N4          &kp N5            &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &jp_minus_equal
+&kp TAB           &kp Q   &kp W   &kp E      &kp R           &kp T             &kp Y           &kp U      &kp I      &kp O       &kp P     &jp_at_grave
+&kp LEFT_SHIFT    &kp A   &kp S   &kp D      &kp F           &kp G             &kp H           &kp J      &kp K      &kp L       &kp SEMI  &jp_coron_aster
+&kp LEFT_COMMAND  &kp Z   &kp X   &kp C      &kp V           &kp B             &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp UNDERSCORE
+                                  &kp SPACE  &kp LEFT_SHIFT  &mo 1             &kp BACKSPACE   &kp ENTER
+                                             &kp LEFT_ALT    &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -79,10 +115,10 @@
 
         layer_1 {
             bindings = <
-&trans            &kp F1            &kp F2        &kp F3  &kp F4  &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-&kp CAPS          &trans            &trans        &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans   &kp F12
-&kp LEFT_SHIFT    &trans            &trans        &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &trans
-&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans   &trans
+&trans            &kp F1            &kp F2        &kp F3  &kp F4  &kp F5    &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &jp_caret_tilda
+&kp CAPS          &kp F11           &kp F12       &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans   &jp_yen_pipe
+&kp LEFT_SHIFT    &trans            &trans        &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &kp LEFT_BRACKET
+&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans   &kp RIGHT_BRACKET
                                                   &trans  &trans  &trans    &trans  &trans
                                                           &trans  &trans    &trans
             >;
@@ -99,18 +135,8 @@
                                           &trans      &trans  &trans         &trans  &trans
                                                       &trans  &trans         &trans
             >;
-            trackball-bindings = <&tmv_coarse>;
-        };
 
-        layer_3 {
-            bindings = <
-&kp ESCAPE        &none             &none         &none      &none  &none    &none          &none      &none      &none      &none  &none
-&kp TAB           &none             &none         &none      &none  &none    &none          &none      &none      &none      &none  &none
-&kp LEFT_SHIFT    &none             &none         &none      &none  &none    &none          &mkp LCLK  &mkp MCLK  &mkp RCLK  &none  &none
-&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &none      &none  &none    &none          &none      &mkp MB4   &mkp MB5   &none  &none
-                                                  &kp SPACE  &none  &none    &kp BACKSPACE  &kp ENTER
-                                                             &none  &none    &none
-            >;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         /* layer_4 {
