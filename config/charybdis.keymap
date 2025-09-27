@@ -63,7 +63,7 @@
         tmv_coarse: trackball_move_coarse {
             compatible = "zmk,behavior-pointing-trackball-move";
             label = "TMV_COARSE";
-            bindings = <&kp C_PP>>;
+            bindings = <&kp C_PP>;
             scale-multiplier = <1.5>; // 好みの値に調整
             scale-divisor = <1.0>;
         };
@@ -72,7 +72,7 @@
         tsl: trackball_scroll {
             compatible = "zmk,behavior-pointing-trackball-scroll";
             label = "TSL";
-            bindings = <&kp C_PP>>;
+            bindings = <&kp C_PP>;
             invert-y; // 垂直スクロールを反転させる場合はこの行を追加
             // invert-x; // 水平スクロールを反転させる場合はこの行を追加
             scale-multiplier = <1.0>; // 好みの値に調整
