@@ -8,12 +8,12 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <8>, <17>, <17>;
+            psels = <8>, <17>, <15>;
         };
     };
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <8>, <17>, <17>;
+            psels = <8>, <17>, <15>;
             low-power-enable;
         };
     };
