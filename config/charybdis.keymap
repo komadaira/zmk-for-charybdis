@@ -11,6 +11,19 @@
 };
 
 / {
+    // 既存の &tmv_coarse の設定を上書き
+    &tmv_coarse {
+        scale-multiplier = <3>; // 1.5倍速 (3/2)
+        scale-divisor = <2>;
+    };
+
+    // 既存の &tsl の設定を上書き
+    &tsl {
+        invert-y; // Y軸（垂直）スクロールを反転
+        scale-multiplier = <6>; // 1.2倍速 (6/5)
+        scale-divisor = <5>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -58,19 +71,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-        };
-        // ★ポインタ移動のビヘイビアをカスタマイズ
-        // 既存の &tmv_coarse の設定を上書き
-        &tmv_coarse {
-            scale-multiplier = <3>;
-            scale-divisor = <2>;
-        };
-
-        // 既存の &tsl の設定を上書き
-        &tsl {
-            invert-y;
-            scale-multiplier = <6>; // 例: 1.2倍にしたい場合
-            scale-divisor = <5>;
         };
     };
 
