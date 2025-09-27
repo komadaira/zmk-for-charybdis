@@ -1,17 +1,14 @@
 #include <input/processors.dtsi>
 
 / {
-    // ポインタ挙動カスタマイズ
-    pointer_processors {
-        compatible = "zmk,input-processor-list";
-        // 通常時はXY移動（カーソル移動）
-        processors = <&zip_xy_scaler>;
-    };
+    pointer_listener {
+        // 通常時のプロセッサ（ポインタ用、XY移動）
+        input-processors = <&zip_xy_scaler>;
 
-    // スクロールモード
-    scroll_mode_processors {
-        compatible = "zmk,input-processor-list";
-        // スクロール用にxy_to_scroll_mapperを使う
-        processors = <&zip_xy_to_scroll_mapper>;
+        scroll_mode {
+            // レイヤー1有効時のみスクロール用プロセッサに切り替え
+            layers = <1>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 };
