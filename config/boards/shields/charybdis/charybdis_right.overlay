@@ -34,6 +34,10 @@
         <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 };
 
+&default_transform {
+    col-offset = <6>;
+};
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
