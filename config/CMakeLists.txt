@@ -1,1 +1,0 @@
-list(APPEND ZMK_EXTRA_MODULES ${CMAKE_CURRENT_SOURCE_DIR}/modules/zmk-pmw3610-driver)
