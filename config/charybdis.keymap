@@ -129,12 +129,12 @@
 
         layer_1 {
             bindings = <
-&trans            &kp F1            &kp F2        &kp F3  &kp F4          &kp F5              &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &jp_caret_tilda
-&kp CAPS          &kp F11           &kp F12       &trans  &trans          &trans              &trans  &trans    &kp UP    &trans     &trans   &jp_yen_pipe
-&kp LEFT_SHIFT    &trans            &trans        &trans  &mkp MOVE_UP    &mkp SCROLL_UP      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &kp LEFT_BRACKET
-&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &mkp MOVE_DOWN  &mkp SCROLL_DOWN    &trans  &trans    &trans    &trans     &trans   &kp RIGHT_BRACKET
-                                                  &trans  &trans          &trans              &trans  &trans
-                                                          &trans          &trans              &trans
+&trans            &kp F1            &kp F2        &kp F3  &kp F4          &kp F5            &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &jp_caret_tilda
+&kp CAPS          &kp F11           &kp F12       &trans  &trans          &trans            &trans  &trans    &kp UP    &trans     &trans   &jp_yen_pipe
+&kp LEFT_SHIFT    &trans            &trans        &trans  &mmv MOVE_UP    &msc SCRL_UP      &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans   &kp LEFT_BRACKET
+&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &mmv MOVE_DOWN  &msc SCRL_DOWN    &trans  &trans    &trans    &trans     &trans   &kp RIGHT_BRACKET
+                                                  &trans  &trans          &trans            &trans  &trans
+                                                          &trans          &trans            &trans
             >;
 
             // trackball-bindings = <&tsl>;
