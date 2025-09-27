@@ -9,6 +9,7 @@
     spi0_default: spi0_default {
         group1 {
             psels = <8>, <17>;
+            // SCK, MOSI（MISO 3-wire SPIなら不要）
         };
     };
 };
@@ -30,12 +31,10 @@
 // trackball bus
 &spi0 {
     status = "okay";
-    sck-pin = <8>;
-    mosi-pin = <17>;
-    miso-pin = <17>;
     cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
     pinctrl-0 = <&spi0_default>;
     pinctrl-names = "default";
+    // sck-pin, mosi-pin, miso-pinは絶対に書かない！
 };
 
 &trackball {
