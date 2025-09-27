@@ -52,8 +52,7 @@
 	    reg = <0>;
 	    label = "TRACKBALL";
 	    spi-max-frequency = <2000000>;
-	    duplex = <2048>;
-	    irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	    duplex = <2048>; // required by 3-wire spi
 	};
 };
 
