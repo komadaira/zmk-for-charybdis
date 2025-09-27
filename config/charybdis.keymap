@@ -87,7 +87,7 @@
                                                           &trans  &trans    &trans
             >;
 
-            // trackball-bindings = <&tsl>;
+            trackball-bindings = <&tsl>;
         };
 
         layer_2 {
@@ -99,6 +99,7 @@
                                           &trans      &trans  &trans         &trans  &trans
                                                       &trans  &trans         &trans
             >;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         layer_3 {
