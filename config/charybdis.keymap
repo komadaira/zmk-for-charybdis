@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // OS設定を日本語キーボードのまま使用するための変換定義
+
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
@@ -92,7 +93,8 @@
             bindings = <&kp KP_MINUS>, <&kp KP_EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jp_coron_aster: jp_coron_aster {
@@ -101,7 +103,8 @@
             bindings = <&kp COLON>, <&kp ASTRK>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         jp_at_grave: jp_at_grave {
@@ -110,7 +113,8 @@
             bindings = <&kp AT>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jp_yen_pipe: jp_yen_pipe {
@@ -119,7 +123,8 @@
             bindings = <&kp INT_YEN>, <&kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         jp_caret_tilda: jp_caret_tilda {
@@ -128,7 +133,8 @@
             bindings = <&kp CARET>, <&kp TILDE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
