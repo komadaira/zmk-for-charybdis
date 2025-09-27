@@ -87,7 +87,7 @@
                                                           &trans  &trans    &trans
             >;
 
-             trackball-bindings = <&scroll_mode>;
+            trackball-bindings = <&tsl>;
         };
 
         layer_2 {
