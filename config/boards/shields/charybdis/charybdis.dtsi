@@ -48,7 +48,7 @@
 
 	trackball: trackball@0 {
 		compatible = "pixart,pmw3610";
-		status = "disabled";
+		status = "okay";
 		reg = <0>;
 		label = "TRACKBALL";
 		spi-max-frequency = <2000000>;
