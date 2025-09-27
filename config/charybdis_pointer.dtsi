@@ -1,0 +1,14 @@
+#include <input/processors.dtsi>
+
+/ {
+    pointer_listener {
+        // 通常時のプロセッサ（ポインタ用、XY移動）
+        input-processors = <&zip_xy_scaler>;
+
+        scroll_mode {
+            // レイヤー1有効時のみスクロール用プロセッサに切り替え
+            layers = <1>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
+    };
+};
