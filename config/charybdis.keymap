@@ -125,7 +125,7 @@
                                              &kp LEFT_ALT    &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            // trackball-bindings = <&tmv_coarse>;
         };
 
         layer_1 {
@@ -138,7 +138,7 @@
                                                           &trans  &trans    &trans
             >;
 
-            trackball-bindings = <&tsl>;
+            // trackball-bindings = <&tsl>;
         };
 
         layer_2 {
@@ -151,7 +151,7 @@
                                                       &trans  &trans         &trans
             >;
 
-            trackball-bindings = <&tmv_coarse>;
+            // trackball-bindings = <&tmv_coarse>;
         };
 
         /* layer_4 {
