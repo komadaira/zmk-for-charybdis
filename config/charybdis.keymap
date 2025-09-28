@@ -105,7 +105,7 @@
         jp_at_grave: jp_at_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_AT_GRAVE";
-            bindings = <&kp JP_AT>, <&kp JP_BACKQUATE>;
+            bindings = <&kp JP_AT>, <&kp JP_BACKQUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
