@@ -10,6 +10,28 @@
 };
 
 / {
+    // OS設定を日本語キーボードのまま使用するための変換定義
+    #define JP_DQUOTE       AT                // "
+    #define JP_AMPERSAND    CARET             // &
+    #define JP_QUOTE        AMPERSAND         // '
+    #define JP_EQUAL        UNDER             // =
+    #define JP_CARET        EQUAL             // ^
+    #define JP_YEN          0x89              // ¥
+    #define JP_PLUS         COLON             // +
+    #define JP_TILDE        PLUS              // ~
+    #define JP_PIPE         LS(0x89)          // |
+    #define JP_AT           LEFT_BRACKET      // @
+    #define JP_COLON        SINGLE_QUOTE      // :
+    #define JP_ASTERISK     DOUBLE_QUOTES     // *
+    #define JP_BACKQUOTE    LEFT_BRACE        // `
+    #define JP_UNDERSCORE   LS(0x87)          // _
+    #define JP_LBRACKET     RIGHT_BRACKET     // [
+    #define JP_RBRACKET     BACKSLASH         // ]
+    #define JP_LPAREN       ASTERISK          // (
+    #define JP_RPAREN       LEFT_PARENTHESIS  // )
+    #define JP_LBRACE       RIGHT_BRACE       // {
+    #define JP_RBRACE       PIPE              // }
+
     combos {
         compatible = "zmk,combos";
 
@@ -63,7 +85,7 @@
         jp_minus_equal: jp_minus_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_MINUS_EQUAL";
-            bindings = <&kp MINUS>, <&kp EQUAL>;
+            bindings = <&kp MINUS>, <&kp JP_EQUAL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -73,7 +95,7 @@
         jp_coron_aster: jp_coron_aster {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_CORON_ASTER";
-            bindings = <&kp COLON>, <&kp ASTERISK>;
+            bindings = <&kp JP_COLON>, <&kp JP_ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -83,7 +105,7 @@
         jp_at_grave: jp_at_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_AT_GRAVE";
-            bindings = <&kp AT>, <&kp GRAVE>;
+            bindings = <&kp JP_AT>, <&kp JP_BACKQUATE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -93,7 +115,7 @@
         jp_yen_pipe: jp_yen_pipe {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_YEN_PIPE";
-            bindings = <&kp INT_YEN>, <&kp PIPE>;
+            bindings = <&kp INT_YEN>, <&kp JP_PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -103,7 +125,7 @@
         jp_caret_tilda: jp_caret_tilda {
             compatible = "zmk,behavior-mod-morph";
             label = "JP_CARET_TILDA";
-            bindings = <&kp CARET>, <&kp TILDE>;
+            bindings = <&kp JP_CARET>, <&kp JP_TILDE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -119,7 +141,7 @@
 &kp ESC           &kp N1  &kp N2  &kp N3     &kp N4        &kp N5            &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &jp_minus_equal
 &kp TAB           &kp Q   &kp W   &kp E      &kp R         &kp T             &kp Y           &kp U      &kp I      &kp O       &kp P     &jp_at_grave
 &kp LEFT_SHIFT    &kp A   &kp S   &kp D      &kp F         &kp G             &kp H           &kp J      &kp K      &kp L       &kp SEMI  &jp_coron_aster
-&kp LEFT_COMMAND  &kp Z   &kp X   &kp C      &kp V         &kp B             &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp UNDERSCORE
+&kp LEFT_COMMAND  &kp Z   &kp X   &kp C      &kp V         &kp B             &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp JP_UNDERSCORE
                                   &kp SPACE  &mo 1         &kp LEFT_SHIFT    &kp BACKSPACE   &kp ENTER
                                              &kp LEFT_ALT  &kp LANGUAGE_2    &kp LANGUAGE_1
             >;
