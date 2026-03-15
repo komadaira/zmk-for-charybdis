@@ -141,7 +141,7 @@
 &kp ESC           &kp N1  &kp N2  &kp N3     &kp N4     &kp N5              &kp N6          &kp N7     &kp N8     &kp N9      &kp N0    &jp_minus_equal
 &kp TAB           &kp Q   &kp W   &kp E      &kp R      &kp T               &kp Y           &kp U      &kp I      &kp O       &kp P     &jp_at_grave
 &kp LEFT_CONTROL  &kp A   &kp S   &kp D      &kp F      &kp G               &kp H           &kp J      &kp K      &kp L       &kp SEMI  &jp_coron_aster
-&kp LEFT_ALT      &kp Z   &kp X   &kp C      &kp V      &kp B               &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp JP_UNDERSCORE
+&kp LEFT_ALT      &kp Z   &kp X   &kp C      &kp V      &kp B               &kp N           &kp M      &kp COMMA  &kp PERIOD  &kp FSLH  &kp UNDERSCORE
                                   &kp SPACE  &mo 2      &kp LEFT_SHIFT      &kp BACKSPACE   &kp ENTER
                                              &kp LANG2  &kp LEFT_COMMAND    &kp LANGUAGE_1
             >;
